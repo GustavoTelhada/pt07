@@ -58,7 +58,7 @@ function play_game(){
     //console.log(guess_str);
     
 
-    if(guess_str == "" || guess_str == null || guess_str == "0"){document.getElementById("h1-page2").innerHTML = "Invalid Guess";}
+    if(guess_str == "" || guess == null || guess_str == "0"){document.getElementById("h1-page2").innerHTML = "Invalid Guess";}
 
     //document.getElementById("h1-page2").innerHTML = guess;
 
