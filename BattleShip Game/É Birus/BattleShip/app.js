@@ -25,70 +25,65 @@ window.addEventListener("scroll", bgChanger);
 
 
 
-const alphabet = "abcdef";
-const numbers = "123456";
-
-//var location_1 = 3;
-var location_1 =  (alphabet[Math.floor(Math.random() * alphabet.length)]) + (numbers[Math.floor(Math.random() * numbers.length)]);
-
-var location_2 = (alphabet[Math.floor(Math.random() * alphabet.length)]) + (numbers[Math.floor(Math.random() * numbers.length)]);
-
-var location_3 = (alphabet[Math.floor(Math.random() * alphabet.length)]) + (numbers[Math.floor(Math.random() * numbers.length)]);
-
-console.log(location_1);
-console.log(location_2);
-console.log(location_3);
+const alfabeto = "abcdef";
+const numeros = "123456";
 
 
+var localizacao_1 =  (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);
 
-var hits = 0;
+var localizacao_2 = (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);
 
-var guesses = 0;
+var localizacao_3 = (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);
 
-var isNotSunk = true;
+console.log(localizacao_1);
+console.log(localizacao_2);
+console.log(localizacao_3);
+
+var suposicoes = 0;
+
 
 
 
 
 
 function play_game(){
-    var guess = document.getElementById("name").value;
-    //console.log(guess);
-    var guess_str = guess.toString();
-    //console.log(guess_str);
+    var suposicao = document.getElementById("name").value;
+    //console.log(suposicao);
+    var suposicao_str = suposicao.toString();
+    //console.log(suposicao_str);
     
 
-    if(guess_str == "" || guess == null || guess_str == "0"){document.getElementById("h1-page2").innerHTML = "Invalid Guess";}
+    if(suposicao_str == "" || suposicao == null || suposicao_str == "0"){document.getElementById("h1-page2").innerHTML = "Valor Inválido";}
 
-    //document.getElementById("h1-page2").innerHTML = guess;
+    //document.getElementById("h1-page2").innerHTML = suposicao;
 
-    else if(guess_str == location_1){
-        document.getElementById(guess_str).style.backgroundColor = "red";
+    else if(suposicao_str == localizacao_1){
+        document.getElementById(suposicao_str).style.backgroundColor = "red";
         document.getElementById("h1-page2").innerHTML = "Nice Shot";
-        location_1 = 0;
+        localizacao_1 = 0;
     }
 
-    else if(guess_str == location_2){
-        document.getElementById(guess_str).style.backgroundColor = "red";
+    else if(suposicao_str == localizacao_2){
+        document.getElementById(suposicao_str).style.backgroundColor = "red";
         document.getElementById("h1-page2").innerHTML = "Nice Shot";
-        location_2 = 0;
+        localizacao_2 = 0;
     }
 
-    else if(guess_str == location_3){
-        document.getElementById(guess_str).style.backgroundColor = "red";
+    else if(suposicao_str == localizacao_3){
+        document.getElementById(suposicao_str).style.backgroundColor = "red";
         document.getElementById("h1-page2").innerHTML = "Nice Shot";
-        location_3 = 0;
+        localizacao_3 = 0;
     }
 
     else{
-        document.getElementById(guess_str).style.backgroundColor = "blue";
+        document.getElementById(suposicao_str).style.backgroundColor = "blue";
         document.getElementById("h1-page2").innerHTML = "Water";
     }
 
-    guesses = guesses + 1;
-    document.getElementById("guesses").innerHTML = "Guesses: " + guesses;
+    suposicoes = suposicoes + 1;
+    document.getElementById("suposicoes").innerHTML = "suposicoes: " + suposicoes;
 
-    if(location_1 == 0 && location_2 == 0 && location_3 == 0){
+    if(localizacao_1 == 0 && localizacao_2 == 0 && localizacao_3 == 0){
         
         GameOver();
         
@@ -111,6 +106,9 @@ function reset_game(){
 
 document.getElementById("btn").onclick = play_game;
 document.getElementById("reset-btn").onclick = reset_game;
+
+
+
 
 /*
 function startgame(){
