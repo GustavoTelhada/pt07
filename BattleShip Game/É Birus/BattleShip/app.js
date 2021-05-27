@@ -51,13 +51,16 @@ var suposicoes = 0;
 
 
 function play_game(){
-    var suposicao = document.getElementById("coordenada").value;
-    //console.log(suposicao);
-    var suposicao_str = suposicao.toString();
-    //console.log(suposicao_str);
+    var suposicao_str = document.getElementById("coordenada").value;
+
+    if(suposicao_str.length != 2){document.getElementById("h1-page2").innerHTML = "Inválido"}
+    //console.log("-------------");
+    //console.log(suposicao_str[0]);
+    //console.log(suposicao_str[1]);
+    if(typeof suposicao_str[0] != "string" || typeof suposicao_str[1] != "number"){document.getElementById("h1-page2").innerHTML = "Inválido"}
     
 
-    if(suposicao_str == "" || suposicao == null || suposicao_str == "0"){document.getElementById("h1-page2").innerHTML = "Valor Inválido";}
+    if(suposicao_str == "" || suposicao_str == null || suposicao_str == "0"){document.getElementById("h1-page2").innerHTML = "Valor Inválido";}
 
     //document.getElementById("h1-page2").innerHTML = suposicao;
 
