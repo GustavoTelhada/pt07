@@ -47,7 +47,7 @@ var suposicoes = 0;
 
 
 function play_game(){
-    var suposicao = document.getElementById("name").value;
+    var suposicao = document.getElementById("coordenada").value;
     //console.log(suposicao);
     var suposicao_str = suposicao.toString();
     //console.log(suposicao_str);
@@ -59,29 +59,29 @@ function play_game(){
 
     else if(suposicao_str == localizacao_1){
         document.getElementById(suposicao_str).style.backgroundColor = "red";
-        document.getElementById("h1-page2").innerHTML = "Nice Shot";
+        document.getElementById("h1-page2").innerHTML = "Acertaste";
         localizacao_1 = 0;
     }
 
     else if(suposicao_str == localizacao_2){
         document.getElementById(suposicao_str).style.backgroundColor = "red";
-        document.getElementById("h1-page2").innerHTML = "Nice Shot";
+        document.getElementById("h1-page2").innerHTML = "Acertaste";
         localizacao_2 = 0;
     }
 
     else if(suposicao_str == localizacao_3){
         document.getElementById(suposicao_str).style.backgroundColor = "red";
-        document.getElementById("h1-page2").innerHTML = "Nice Shot";
+        document.getElementById("h1-page2").innerHTML = "Acertaste";
         localizacao_3 = 0;
     }
 
     else{
         document.getElementById(suposicao_str).style.backgroundColor = "blue";
-        document.getElementById("h1-page2").innerHTML = "Water";
+        document.getElementById("h1-page2").innerHTML = "Água";
     }
 
     suposicoes = suposicoes + 1;
-    document.getElementById("suposicoes").innerHTML = "suposicoes: " + suposicoes;
+    document.getElementById("guesses").innerHTML = "Tentativas: " + suposicoes;
 
     if(localizacao_1 == 0 && localizacao_2 == 0 && localizacao_3 == 0){
         
@@ -106,6 +106,12 @@ function reset_game(){
 
 document.getElementById("btn").onclick = play_game;
 document.getElementById("reset-btn").onclick = reset_game;
+
+
+
+
+
+
 
 
 
