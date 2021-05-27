@@ -31,9 +31,13 @@ const numeros = "123456";
 
 var localizacao_1 =  (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);
 
+
+
 var localizacao_2 = (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);
+while(localizacao_2 == localizacao_1){localizacao_2 = (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);}
 
 var localizacao_3 = (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);
+while(localizacao_3 == localizacao_2 || localizacao_3 == localizacao_1){localizacao_3 = (alfabeto[Math.floor(Math.random() * alfabeto.length)]) + (numeros[Math.floor(Math.random() * numeros.length)]);}
 
 console.log(localizacao_1);
 console.log(localizacao_2);
@@ -93,9 +97,9 @@ function play_game(){
 
 function GameOver(){
     console.log("Game Over");
-    document.getElementById("name").style.display = "none";
+    document.getElementById("coordenada").style.display = "none";
     document.getElementById("btn").style.display = "none";
-    document.getElementById("h1-page2").innerHTML = "You Won!";
+    document.getElementById("h1-page2").innerHTML = "Ganhaste";
 }
 
 
