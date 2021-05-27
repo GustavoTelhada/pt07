@@ -1,0 +1,76 @@
+html{
+    font-family: monospace;
+    scroll-behavior: smooth;
+}
+
+body{
+    align-items: center;
+    text-align: center;
+}
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-text h1{
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.intro-text p{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+
+.intro-text a{
+    text-decoration: none;
+}
+
+#intro-btn{
+    margin: 20px 0px 0px 0px;
+    margin-top: 20px;
+    margin-left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    height: 5%;
+    border: black;
+    outline: none;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    font-size: 15px;
+    cursor: pointer;
+    width: 30%;
+}
+
+#intro-btn:hover{
+    transition: ease-in 0.5s;
+    background-color: blue;
+}
+
+#home-page{
+    transition: ease-out 2s;
+}
+
+section{
+    height: 5vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.pizzas{
+    color: rgb(54, 54, 54);
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+      font-family: monospace;
+   box-sizing: border-box; 
+  }
+  body {
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    min-height: calc(100vh - 40vh);
+  }
+  #main > article {
+    flex: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 10vw;
+    background: rgb(0, 0, 0);
+  }
+  #main > nav {
+    order: -1;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+  header, footer {
+    background: rgb(0, 0, 0);
+    height: 20vh;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+  }
+</style>
+<body>
+  <header>Tópico 2.12</header>
+  <div id="main">
+    <article><code>
+        <p>while (afundado == false) {</p>
+        <p>     suposicao = prompt("Todos preparados? Dispara! (insere um número entre 0 a 6):");</p>
+        <p>     if (suposicao < 0 || suposicao > 6) {</p>
+        <p>         alert ("Por favor insere um número válido!")</p>
+        <p>     }</p>
+        <p>     else {</p>
+        <p>         suposicoes = suposicoes + 1;</p>
+        <p>         if (suposicao == localizacao1 || suposicao == localizacao2 || suposicao == localizacao3) {</p>
+        <p>             acertos = acertos + 1;</p>
+        <p>}</p>
+        <p>     }</p>
+        <p>}</p>
+    
+    
+    
+    </code></article>
+    <nav></nav>
+    <aside></aside>
+  </div>
+  <footer></footer>
+</body> 
