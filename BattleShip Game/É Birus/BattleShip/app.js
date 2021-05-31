@@ -43,9 +43,9 @@ console.log(localizacao_1);
 console.log(localizacao_2);
 console.log(localizacao_3);
 
+
+
 var suposicoes = 0;
-
-
 
 
 
@@ -91,9 +91,7 @@ function play_game(){
     document.getElementById("guesses").innerHTML = "Tentativas: " + suposicoes;
 
     if(localizacao_1 == 0 && localizacao_2 == 0 && localizacao_3 == 0){
-        
         GameOver();
-        
     }
 
 }

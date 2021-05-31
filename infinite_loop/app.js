@@ -11,17 +11,20 @@ function BrowserCrash(){
             }
 
         else if (i <= n){
-            console.log("depois else if");
+            //console.log("depois else if");
             text = ""
             while (i <= n) {
-                console.log("depois while");
-            text = text + "pizza, "
-
-            i = i + 1
+                //console.log("depois while");
+                text = text + "pizza, "
+                i = i + 1
             }
-            console.log("fim");
+            //console.log("fim");
             document.getElementById("p-pizzas").innerHTML = text;
             break
             }
     }
 }
+
+
+
+
